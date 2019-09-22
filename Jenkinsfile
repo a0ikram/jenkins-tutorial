@@ -1,13 +1,4 @@
-pipeline("MASTER") {
-
-       agent {
-                docker {
-                            image 'image-build-agent'
-                            args dockerArgs('--network="host"')
-                            label 'MASTER'
-                            }
-   }
-
+node{
     stages{
     stage('Clone Repo')
     {
