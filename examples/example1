@@ -1,0 +1,8 @@
+node("MASTER"){
+    stage('TASK1')
+    {
+        sh'echo Hello Jenkins'
+
+    }
+
+}

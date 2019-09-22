@@ -1,0 +1,40 @@
+node("MASTER"){
+        environment {
+        seal = ''
+        google = ''
+        slack = ''
+    }
+
+    stage('Ping Seal')
+    {
+
+
+
+        script{
+         env.seal = "Seal"
+       }
+        }
+
+    stage('Ping Google')
+    {
+        script{
+         env.google = "Google"
+       }
+
+    }
+    stage('Ping Slack')
+    {
+        script{
+         env.slack = "Slack"
+       }
+
+    }
+    stage('Results')
+    {
+        echo "${env.seal}";
+        echo "${env.google}";
+
+        echo "${env.slack}";
+        }
+
+}
