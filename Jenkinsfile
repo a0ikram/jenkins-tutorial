@@ -1,4 +1,4 @@
-pipeline {
+pipeline("MASTER") {
 
        agent {
                 docker {
