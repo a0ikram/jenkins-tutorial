@@ -4,7 +4,7 @@ pipeline {
                 docker {
                             image 'image-build-agent'
                             args dockerArgs('--network="host"')
-                            label 'large'
+                            label 'MASTER'
                             }
    }
 
