@@ -1,12 +1,10 @@
 node("MASTER"){
-    stages{
     stage('Clone Repo')
     {
         sh'''
             python3 stage_1.py
         '''
 
-    }
     }
 
      post {
