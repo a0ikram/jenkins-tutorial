@@ -1,4 +1,4 @@
-node{
+node("MASTER"){
     stages{
     stage('Clone Repo')
     {
