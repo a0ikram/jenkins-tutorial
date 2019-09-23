@@ -8,24 +8,22 @@ node("MASTER"){
     stage('Ping Seal')
     {
 
-
-
         script{
-         env.seal = "Seal"
+         env.seal = sh([ script: 'ping -c 4 www.seal-software.net', returnStdout: true ]).trim()
        }
         }
 
     stage('Ping Google')
     {
-        script{
-         env.google = "Google"
+       script{
+         env.google = sh([ script: 'ping -c 4 www.google.com', returnStdout: true ]).trim()
        }
 
     }
     stage('Ping Slack')
     {
         script{
-         env.slack = "Slack"
+         env.slack = sh([ script: 'ping -c 4 www.slack.com', returnStdout: true ]).trim()
        }
 
     }
