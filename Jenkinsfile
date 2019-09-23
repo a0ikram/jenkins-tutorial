@@ -11,8 +11,10 @@ node("MASTER"){
     }
     stage("create virtual env")
     {
-            sh '/Users/Shared/Jenkins/Library/Python/3.7/bin/virtualenv catfish_env'
-            sh 'source catfish_env/bin/activate'
+            echo ("creating virtual environment tutorial_env")
+            sh '/Users/Shared/Jenkins/Library/Python/3.7/bin/virtualenv tutorial_env'
+            echo ("running tutorial_env")
+            sh 'source tutorial_env/bin/activate'
     }
     stage('running app')
     {
