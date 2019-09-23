@@ -14,6 +14,7 @@ node("MASTER"){
             dt=$(date '+%d/%m/%Y %H:%M:%S');
             echo "$dt"
             cd jenkins-tutorial
+            pip install -r requirements.txt
             python selenium_example.py
         '''
 
