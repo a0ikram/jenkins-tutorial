@@ -2,9 +2,6 @@ node("MASTER"){
     stage('Clone Repo')
     {
         sh'''
-            rm -rf jenkins-tutorial
-            rm -rf catfish_env
-            rm package_v1.0.tar.gz
             git clone https://github.com/a0ikram/jenkins-tutorial.git/
         '''
 
