@@ -2,6 +2,7 @@ node("MASTER"){
     stage('Clone Repo')
     {
         sh'''
+            rm -rf jenkins-tutorial
             git clone https://github.com/a0ikram/jenkins-tutorial.git/
         '''
 
